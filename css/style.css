@@ -1,0 +1,58 @@
+body {
+  font-family: 'helvetica';
+  font-size: 18px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0; }
+  body .main {
+    background-size: cover;
+    display: inline-block;
+    height: 100vh;
+    position: relative;
+    width: 100vw; }
+    body .main .container {
+      padding: 20px; }
+      body .main .container .overlay {
+        background-size: cover;
+        display: block;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%; }
+    body .main a {
+      color: #000; }
+    body .main ul {
+      margin: 0;
+      padding: 0; }
+    body .main .left {
+      margin: 20px auto; }
+      body .main .left .projects ul li {
+        list-style: none; }
+        body .main .left .projects ul li:hover {
+          cursor: pointer; }
+    body .main .right {
+      margin-top: 20px; }
+      body .main .right .projects ul li {
+        list-style: none; }
+  body canvas {
+    position: absolute;
+    left: 75%;
+    top: 40%;
+    transform: translate(-50%, -50%); }
+  @media only screen and (min-width: 1024px) {
+    body {
+      font-size: 23px;
+      line-height: 30px; }
+      body .main {
+        padding: 50px; }
+        body .main .left {
+          display: inline-block;
+          float: left;
+          width: 50%; }
+        body .main .right {
+          display: inline-block;
+          margin-left: 10px;
+          width: 47%; } }
+
+/*# sourceMappingURL=style.css.map */
