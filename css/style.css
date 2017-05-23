@@ -31,28 +31,42 @@ body {
         list-style: none; }
         body .main .left .projects ul li:hover {
           cursor: pointer; }
-    body .main .right {
-      margin-top: 20px; }
-      body .main .right .projects ul li {
+      body .main .left .social ul li {
         list-style: none; }
   body canvas {
     position: absolute;
-    left: 75%;
-    top: 40%;
-    transform: translate(-50%, -50%); }
+    left: 71%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    width: 100%; }
   @media only screen and (min-width: 1024px) {
     body {
       font-size: 23px;
       line-height: 30px; }
+      body canvas {
+        top: 50%;
+        width: auto; }
       body .main {
-        padding: 50px; }
+        padding: 20px 50px 50px 50px; }
         body .main .left {
           display: inline-block;
           float: left;
+          position: relative;
           width: 50%; }
-        body .main .right {
-          display: inline-block;
-          margin-left: 10px;
-          width: 47%; } }
+          body .main .left a {
+            position: relative; }
+            body .main .left a:before {
+              background: #000;
+              content: '';
+              display: inline-block;
+              height: 3px;
+              width: 1%;
+              opacity: 0;
+              position: absolute;
+              top: 12px;
+              transition: all .5s ease-in-out; }
+            body .main .left a:hover:before {
+              opacity: 1;
+              width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

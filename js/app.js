@@ -50,7 +50,7 @@ window.onload = function() {
   gl.shaderSource(fsh,
   "\nprecision mediump float; varying vec2 V; uniform float T;"+
   "void main(void) {"+
-  "gl_FragColor = vec4(75,0,130,.6);}");
+  "gl_FragColor = vec4(75,0,130,.8);}");
 
   gl.compileShader(fsh);
 
