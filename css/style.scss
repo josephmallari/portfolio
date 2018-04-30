@@ -13,7 +13,7 @@ body {
     width: 100vw;
 
     .container {
-      padding: 20px;
+      padding: 20px 40px 20px 20px;
 
       .overlay {
         background-size: cover;
@@ -26,6 +26,39 @@ body {
       }
     }
 
+		.left {
+			margin: 20px auto;
+			position: relative;
+
+			.projects {
+				margin-bottom: 15px;
+
+				ul li {
+					list-style: none;
+
+					video {
+						display: none;
+					}
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.social ul li {
+				list-style: none;
+			}
+
+			.intro {
+				margin-bottom: 15px;
+			}
+
+			.current {
+				margin-bottom: 15px;
+			}
+		}
+
     a {
       color: #000;
     }
@@ -34,45 +67,11 @@ body {
       margin: 0;
       padding: 0;
     }
-
-		.left {
-			margin: 20px auto;
-			position: relative;
-
-			.projects {
-				ul li {
-					list-style: none;
-
-          &:hover {
-            cursor: pointer;
-          }
-				}
-			}
-
-			.social {
-				ul li {
-					list-style: none;
-				}
-			}
-		}
 	}
 
-  canvas {
-    position: absolute;
-    left: 71%;
-    top: 70%;
-    transform: translate(-50%, -50%);
-		width: 100%;
-  }
-
   @media only screen and (min-width: 1024px) {
-    font-size: 23px;
-    line-height: 30px;
-
-		canvas {
-			top: 50%;
-			width: auto;
-		}
+    font-size: 26px;
+    line-height: 32px;
 
     .main {
       padding: 20px 50px 50px 50px;
@@ -101,6 +100,33 @@ body {
 					&:hover:before {
 						opacity: 1;
 						width: 100%;
+					}
+				}
+
+				.projects ul li:last-child a {
+					&:before {
+						content: none;
+					}
+				}
+
+				.projects ul li {
+					video {
+						display: block;
+						opacity: 0;
+						transition: opacity .5s;
+					}
+
+					&:first-child:hover {
+						video {
+							opacity: 1;
+							padding-left: 40px;
+							position: absolute;
+							right: -400px;
+							top: 40%;
+							transform: translateY(-50%);
+							height: 40%;;
+							width: auto;
+						}
 					}
 				}
       }
