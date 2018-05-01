@@ -2,29 +2,18 @@ body {
 	font-family: 'helvetica';
 	font-size: 18px;
 	margin: 0;
-  overflow: hidden;
+	overflow: hidden;
 	padding: 0;
 
 	.main {
-    background-size: cover;
-    display: inline-block;
-    height: 100vh;
-    position: relative;
-    width: 100vw;
+		display: inline-block;
+		height: 100vh;
+		position: relative;
+		width: 100vw;
 
-    .container {
-      padding: 20px 40px 20px 20px;
-
-      .overlay {
-        background-size: cover;
-        display: block;
-        height: 100%;
-        left: 0;
-        top: 0;
-        position: absolute;
-        width: 100%;
-      }
-    }
+		.container {
+			padding: 20px 40px 20px 20px;
+		}
 
 		.left {
 			margin: 20px auto;
@@ -33,8 +22,8 @@ body {
 			.projects {
 				margin-bottom: 15px;
 
-				ul li {
-					list-style: none;
+					ul li {
+						list-style: none;
 
 					video {
 						display: none;
@@ -59,28 +48,28 @@ body {
 			}
 		}
 
-    a {
-      color: #000;
-    }
+		a {
+			color: #000;
+		}
 
-    ul {
-      margin: 0;
-      padding: 0;
-    }
+		ul {
+			margin: 0;
+			padding: 0;
+		}
 	}
 
-  @media only screen and (min-width: 1024px) {
-    font-size: 26px;
-    line-height: 32px;
+	@media only screen and (min-width: 1024px) {
+		font-size: 26px;
+		line-height: 32px;
 
-    .main {
-      padding: 20px 50px 50px 50px;
+		.main {
+			padding: 20px 50px 50px 50px;
 
-      .left {
-        display: inline-block;
-        float: left;
+			.left {
+				display: inline-block;
+				float: left;
 				position: relative;
-        width: 50%;
+				width: 50%;
 
 				a {
 					position: relative;
@@ -112,24 +101,24 @@ body {
 				.projects ul li {
 					video {
 						display: block;
+						height: 50%;;
+						width: auto;
+						transition: all .5s;
 						opacity: 0;
-						transition: opacity .5s;
+						position: absolute;
+						right: -500px;
+						top: 40%;
+						transform: translateY(-50%);
 					}
 
-					&:first-child:hover {
-						video {
+					&:hover {
+						> video {
 							opacity: 1;
 							padding-left: 40px;
-							position: absolute;
-							right: -400px;
-							top: 40%;
-							transform: translateY(-50%);
-							height: 40%;;
-							width: auto;
 						}
 					}
 				}
-      }
-    }
-  }
+			}
+		}
+	}
 }

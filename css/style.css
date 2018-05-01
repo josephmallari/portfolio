@@ -5,21 +5,12 @@ body {
   overflow: hidden;
   padding: 0; }
   body .main {
-    background-size: cover;
     display: inline-block;
     height: 100vh;
     position: relative;
     width: 100vw; }
     body .main .container {
       padding: 20px 40px 20px 20px; }
-      body .main .container .overlay {
-        background-size: cover;
-        display: block;
-        height: 100%;
-        left: 0;
-        top: 0;
-        position: absolute;
-        width: 100%; }
     body .main .left {
       margin: 20px auto;
       position: relative; }
@@ -72,16 +63,16 @@ body {
             content: none; }
           body .main .left .projects ul li video {
             display: block;
+            height: 50%;
+            width: auto;
+            transition: all .5s;
             opacity: 0;
-            transition: opacity .5s; }
-          body .main .left .projects ul li:first-child:hover video {
-            opacity: 1;
-            padding-left: 40px;
             position: absolute;
-            right: -400px;
+            right: -500px;
             top: 40%;
-            transform: translateY(-50%);
-            height: 40%;
-            width: auto; } }
+            transform: translateY(-50%); }
+          body .main .left .projects ul li:hover > video {
+            opacity: 1;
+            padding-left: 40px; } }
 
 /*# sourceMappingURL=style.css.map */
