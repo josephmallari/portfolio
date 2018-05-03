@@ -2,77 +2,78 @@ body {
   font-family: 'helvetica';
   font-size: 18px;
   margin: 0;
-  overflow: hidden;
-  padding: 0; }
+  padding: 0;
+  overflow: hidden; }
+  body a {
+    color: #000; }
+  body ul {
+    margin: 0;
+    padding: 0; }
+    body ul li {
+      list-style: none; }
   body .main {
-    display: inline-block;
-    height: 100vh;
-    position: relative;
-    width: 100vw; }
-    body .main .container {
-      padding: 20px 40px 20px 20px; }
-    body .main .left {
-      margin: 20px auto;
-      position: relative; }
-      body .main .left .projects {
-        margin-bottom: 15px; }
-        body .main .left .projects ul li {
-          list-style: none; }
-          body .main .left .projects ul li video {
-            display: none; }
-          body .main .left .projects ul li:hover {
-            cursor: pointer; }
-      body .main .left .social ul li {
-        list-style: none; }
-      body .main .left .intro {
-        margin-bottom: 15px; }
-      body .main .left .current {
-        margin-bottom: 15px; }
-    body .main a {
-      color: #000; }
-    body .main ul {
-      margin: 0;
-      padding: 0; }
+    font-size: 27px;
+    padding: 40px 35px 0 20px; }
+    body .main .projects {
+      margin-bottom: 15px; }
+      body .main .projects video,
+      body .main .projects p {
+        display: none; }
+      body .main .projects:hover {
+        cursor: pointer; }
+    body .main .intro {
+      margin-bottom: 15px; }
+    body .main .current {
+      margin-bottom: 15px; }
   @media only screen and (min-width: 1024px) {
     body {
       font-size: 26px;
       line-height: 32px; }
       body .main {
-        padding: 20px 50px 50px 50px; }
-        body .main .left {
-          display: inline-block;
-          float: left;
-          position: relative;
-          width: 50%; }
-          body .main .left a {
-            position: relative; }
-            body .main .left a:before {
-              background: #000;
-              content: '';
-              display: inline-block;
-              height: 3px;
-              width: 1%;
-              opacity: 0;
-              position: absolute;
-              top: 12px;
-              transition: all .5s ease-in-out; }
-            body .main .left a:hover:before {
-              opacity: 1;
-              width: 100%; }
-          body .main .left .projects ul li:last-child a:before {
-            content: none; }
-          body .main .left .projects ul li video {
-            display: block;
-            height: 50%;
-            width: auto;
-            transition: all .5s;
+        font-size: 28px;
+        line-height: 34px;
+        padding: 50px 0 0 30px; }
+        body .main a {
+          position: relative; }
+          body .main a:before {
+            background: #000;
+            content: '';
+            display: inline-block;
+            height: 3px;
+            width: 1%;
             opacity: 0;
             position: absolute;
-            right: -500px;
-            top: 40%;
-            transform: translateY(-50%); }
-          body .main .left .projects ul li:hover > video {
+            top: 12px;
+            transition: all .5s ease-in-out; }
+          body .main a:hover:before {
             opacity: 1;
-            padding-left: 40px; } }
+            width: 100%; }
+        body .main .projects ul li:last-child a:before {
+          content: none; }
+        body .main .projects ul li video {
+          display: block;
+          height: 35%;
+          width: auto;
+          opacity: 1;
+          position: absolute;
+          right: 30px;
+          top: 40%;
+          transition: all .5s;
+          transform: translateY(-50%); }
+        body .main .projects ul li p {
+          display: block;
+          font-family: Arial;
+          font-size: 14px;
+          transition: opacity .5s;
+          opacity: 0;
+          position: absolute;
+          right: -260px;
+          top: 70%;
+          transform: translateY(-50%); }
+        body .main .projects ul li:hover > video {
+          opacity: 1;
+          padding-left: 40px; }
+        body .main .projects ul li:hover > p {
+          opacity: 1; } }
 
 /*# sourceMappingURL=style.css.map */
