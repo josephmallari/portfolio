@@ -25,6 +25,10 @@ body {
 		.projects {
 			margin-bottom: 15px;
 
+			span {
+				opacity: 0;
+			}
+
 			video,
 			p {
 				display: none;
@@ -33,14 +37,47 @@ body {
 			&:hover {
 				cursor: pointer;
 			}
+
+			&.reveal {
+				ul li,
+				span {
+					opacity: 1;
+				}
+			}
+
+			ul li {
+				opacity: 0;
+				transition: opacity .5s;
+			}
 		}
 
 		.intro {
 			margin-bottom: 15px;
+			opacity: 0;
+			transition: opacity .5s;
+
+			&.reveal {
+				opacity: 1;
+			}
 		}
 
 		.current {
 			margin-bottom: 15px;
+			opacity: 0;
+			transition: opacity .5s;
+
+			&.reveal {
+				opacity: 1;
+			}
+		}
+
+		.social {
+			opacity: 0;
+			transition: opacity .5s;
+
+			&.reveal {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -50,8 +87,14 @@ body {
 
 		.main {
 			font-size: 28px;
-			line-height: 34px;
+			line-height: 36px;
 			padding: 50px 0 0 30px;
+
+			.intro,
+			.current,
+			.projects {
+				margin-bottom: 20px;
+			}
 
 			a {
 				position: relative;
@@ -74,7 +117,7 @@ body {
 				}
 			}
 
-			.projects ul li:last-child a {
+			.projects ul li:nth-child(n+6) a {
 				&:before {
 					content: none;
 				}
@@ -85,10 +128,10 @@ body {
 					display: block;
 					height: 35%;;
 					width: auto;
-					opacity: 1;
+					opacity: 0;
 					position: absolute;
-					right: 30px;
-					top: 40%;
+					left: 50%;
+					top: 42%;
 					transition: all .5s;
 					transform: translateY(-50%);
 				}
@@ -97,22 +140,19 @@ body {
 					display: block;
 					font-family: Arial;
 					font-size: 14px;
-					transition: opacity .5s;
+					transition: all .5s;
 					opacity: 0;
 					position: absolute;
-					right: -260px;
-					top: 70%;
+					left: 50%;
+					top: 60%;
 					transform: translateY(-50%);
 				}
 
 				&:hover {
-					> video {
+					> video,
+					p {
 						opacity: 1;
 						padding-left: 40px;
-					}
-
-					> p {
-						opacity: 1;
 					}
 				}
 			}
