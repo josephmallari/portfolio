@@ -61,20 +61,23 @@ body {
         body .main a {
           position: relative; }
           body .main a:before {
-            background: #000;
+            background: #5CB3FF;
             content: '';
             display: inline-block;
-            height: 3px;
+            height: 100%;
             width: 1%;
             opacity: 0;
             position: absolute;
-            top: 15px;
-            transition: all .5s ease-in-out; }
+            top: 0;
+            transition: all .5s ease-in-out;
+            z-index: -1; }
           body .main a:hover:before {
             opacity: 1;
             width: 100%; }
         body .main .projects ul li:nth-child(7) a:before {
           content: none; }
+        body .main .projects ul li:nth-child(n+6) a:before {
+          background: #ff4c4c; }
         body .main .projects ul li:nth-child(n+6) a:hover {
           cursor: crosshair; }
         body .main .projects ul li video {
