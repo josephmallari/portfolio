@@ -96,7 +96,7 @@ body {
           transition: all .5s;
           opacity: 0;
           position: absolute;
-          left: 25%;
+          left: 27%;
           top: 71%;
           transform: translateY(-50%); }
         body .main .projects ul li:hover > video,
