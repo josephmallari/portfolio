@@ -81,12 +81,12 @@ body {
           cursor: crosshair; }
         body .main .projects ul li video {
           display: block;
-          height: 40%;
+          height: 55%;
           width: auto;
           opacity: 0;
           position: absolute;
-          left: 42%;
-          top: 42%;
+          left: 28%;
+          top: 43%;
           transition: all .5s;
           transform: translateY(-50%); }
         body .main .projects ul li p {
@@ -96,8 +96,8 @@ body {
           transition: all .5s;
           opacity: 0;
           position: absolute;
-          left: 42%;
-          top: 63%;
+          left: 25%;
+          top: 71%;
           transform: translateY(-50%); }
         body .main .projects ul li:hover > video,
         body .main .projects ul li:hover p {
