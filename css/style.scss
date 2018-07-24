@@ -1,171 +1,164 @@
 body {
-	font-family: 'helvetica';
-	font-size: 18px;
-	margin: 0;
-	padding: 0 0 40px;
-
-	a {
-		color: #000;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-
-		li {
-			list-style: none;
-		}
-	}
-
-	.main {
-		font-size: 27px;
-		padding: 40px 35px 0 20px;
-
-		.projects {
-			margin-bottom: 15px;
-
-			span {
-				opacity: 0;
-			}
-
-			video,
-			p {
-				display: none;
-			}
-
-			&:hover {
-				cursor: pointer;
-			}
-
-			&.reveal {
-				ul li,
-				span {
-					opacity: 1;
-				}
-			}
-
-			ul li {
-				opacity: 0;
-				transition: opacity .5s;
-			}
-		}
-
-		.intro {
-			margin-bottom: 15px;
-			opacity: 0;
-			transition: opacity .5s;
-
-			&.reveal {
-				opacity: 1;
-			}
-		}
-
-		.current {
-			margin-bottom: 15px;
-			opacity: 0;
-			transition: opacity .5s;
-
-			&.reveal {
-				opacity: 1;
-			}
-		}
-
-		.social {
-			opacity: 0;
-			transition: opacity .5s;
-
-			&.reveal {
-				opacity: 1;
-			}
-		}
-	}
-
-	@media only screen and (min-width: 1024px) {
-		font-size: 26px;
-		line-height: 32px;
-
-		.main {
-			font-size: 28px;
-			line-height: 36px;
-			padding: 50px 0 0 30px;
-
-			.intro,
-			.current,
-			.projects {
-				margin-bottom: 20px;
-			}
-
-			a {
-				position: relative;
-
-				&:before {
-					background: #5CB3FF;
-					content:'';
-					display: inline-block;
-					height: 100%;
-					width: 1%;
-					opacity: 0;
-					position: absolute;
-					top: 0;
-					transition: all .5s ease-in-out;
-					z-index: -1;
-				}
-
-				&:hover:before {
-					opacity: 1;
-					width: 100%;
-				}
-			}
-
-			.projects ul li:nth-child(7) a {
-				&:before {
-					content: none;
-				}
-			}
-
-			.projects ul li:nth-child(n+6) a {
-				&:before {
-					background: #ff4c4c;
-				}
-
-				&:hover {
-					cursor: crosshair;
-				}
-			}
-
-			.projects ul li {
-				video {
-					display: block;
-					height: 55%;
-					width: auto;
-					opacity: 0;
-					position: absolute;
-					left: 28%;
-					top: 43%;
-					transition: all .5s;
-					transform: translateY(-50%);
-				}
-
-				p {
-					display: block;
-					font-family: Arial;
-					font-size: 16px;
-					transition: all .5s;
-					opacity: 0;
-					position: absolute;
-					left: 28%;
-					top: 71%;
-					transform: translateY(-50%);
-				}
-
-				&:hover {
-					> video,
-					p {
-						opacity: 1;
-						padding-left: 40px;
-					}
-				}
-			}
-		}
-	}
+    font-family: 'helvetica';
+    font-size: 18px;
+    margin: 0;
+    padding: 0 0 40px;
+    a {
+        color: #000;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+        }
+    }
+    .main {
+        font-size: 27px;
+        padding: 40px 35px 0 20px;
+        .projects {
+            margin-bottom: 15px;
+            span {
+                opacity: 0;
+            }
+            video,
+            p {
+                display: none;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+            &.reveal {
+                ul li,
+                span {
+                    opacity: 1;
+                }
+            }
+            ul li {
+                opacity: 0;
+                transition: opacity .5s ease;
+            }
+        }
+        .intro {
+            margin-bottom: 15px;
+            opacity: 0;
+            transition: opacity .75s ease;
+            &.reveal {
+                opacity: 1;
+            }
+        }
+        .current {
+            margin-bottom: 15px;
+            opacity: 0;
+            transition: opacity .1s ease;
+            &.reveal {
+                opacity: 1;
+            }
+        }
+        .social {
+            opacity: 0;
+            transition: opacity 1.2s ease;
+            &.reveal {
+                opacity: 1;
+            }
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        font-size: 26px;
+        line-height: 32px;
+        overflow: hidden;
+        .main {
+            font-size: 30px;
+            line-height: 38px;
+            padding: 50px 0 0 30px;
+            .intro,
+            .current,
+            .projects {
+                margin-bottom: 25px;
+            }
+            a {
+                display: inline-block;
+                position: relative;
+                &:before {
+                    background: #5CB3FF;
+                    content: '';
+                    display: inline-block;
+                    height: 100%;
+                    width: 1%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    transition: all .5s ease-in-out;
+                    z-index: -1;
+                }
+                &:hover:before {
+                    opacity: 1;
+                    width: 100%;
+                }
+            }
+            .projects__left ul li {
+                video {
+                    display: block;
+                    height: 55%;
+                    width: auto;
+                    opacity: 0;
+                    position: absolute;
+                    left: auto;
+                    right: 5%;
+                    top: 43%;
+                    transition: all .5s;
+                    transform: translateY(-50%);
+                    z-index: 1;
+                }
+                p {
+                    display: inline-block;
+                    font-family: Arial;
+                    font-size: 16px;
+                    margin: 0;
+                    position: relative;
+                    transition: all .5s;
+                    &:before {
+                        background: #FFF;
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        transition: left .75s ease .3s;
+                    }
+                }
+                a:hover {
+                    +video {
+                        opacity: 1;
+                        padding-right: 40px;
+                        +p {
+                            &:before {
+                                left: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .projects__right ul li {
+                line-height: 1.4;
+            }
+            .social {
+                padding-top: 10px;
+                ul li {
+                    display: block;
+                    a {
+                        display: inline;
+                    }
+                }
+            }
+        }
+        .projects {
+            display: flex;
+            &__width {
+                width: 50%;
+            }
+        }
+    }
 }
