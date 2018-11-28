@@ -11,7 +11,7 @@ body {
     body ul li {
       list-style: none; }
   body .main {
-    font-size: 27px;
+    font-size: 24px;
     padding: 40px 35px 0 20px; }
     body .main .projects {
       margin-bottom: 15px; }
@@ -32,6 +32,17 @@ body {
       margin-bottom: 15px;
       opacity: 0;
       transition: opacity .75s ease; }
+      body .main .intro span {
+        display: inline-block;
+        position: relative; }
+        body .main .intro span::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background: #000; }
       body .main .intro.reveal {
         opacity: 1; }
     body .main .current {
